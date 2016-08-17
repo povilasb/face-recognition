@@ -35,6 +35,8 @@ Requirements
 
 * NumPy
 * OpenCV 2.4
+* matplotlib
+* PIL - Python Imaging Library
 
 Acknowledgements
 ================
