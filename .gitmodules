@@ -1,0 +1,3 @@
+[submodule "src/eigenfaces"]
+	path = src/eigenfaces
+	url = https://github.com/povilasb/eigenfaces
