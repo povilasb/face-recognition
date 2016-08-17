@@ -6,12 +6,6 @@ This is a very simple face detection and recognition implementation in python.
 It uses opencv to detect faces and
 `eigenfaces <https://github.com/antonyross/eigenfaces>`_ to recognize the faces.
 
-Acknowledgements
-================
-
-Big thanks to Antony Ross providing me with the face recognition library
-and guiding me through it.
-
 Usage
 =====
 
@@ -41,3 +35,9 @@ Requirements
 
 * NumPy
 * OpenCV 2.4
+
+Acknowledgements
+================
+
+Big thanks to Antony Ross providing me with the face recognition library
+and guiding me through it.
