@@ -6,6 +6,8 @@ This is a very simple face detection and recognition implementation in python.
 It uses opencv to detect faces and
 `eigenfaces <https://github.com/antonyross/eigenfaces>`_ to recognize the faces.
 
+.. image:: demo.gif
+
 Usage
 =====
 
