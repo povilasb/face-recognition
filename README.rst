@@ -45,3 +45,8 @@ Acknowledgements
 
 Big thanks to Antony Ross providing me with the face recognition library
 and guiding me through it.
+
+
+.. rubric:: References
+
+.. [#f1] http://www.vision.jhu.edu/teaching/vision08/Handouts/case_study_pca1.pdf
