@@ -4,7 +4,7 @@ import cv2
 
 import numpy as np
 
-from eigenfaces.eigenfaces import EigenFaces
+from eigenfaces import EigenFaces
 
 
 class Image:
