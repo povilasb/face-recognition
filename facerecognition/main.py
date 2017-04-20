@@ -36,7 +36,7 @@ def print_help():
 
 
 def train():
-    name = raw_input('Enter your name: ')
+    name = input('Enter your name: ')
     take_training_photos(name, 10)
 
 
