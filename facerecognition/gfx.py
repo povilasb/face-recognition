@@ -4,7 +4,7 @@ import cv2
 
 import numpy as np
 
-from eigenfaces.eigenfaces import EigenFaces
+from eigenfaces import EigenFaces
 
 
 class Image:
@@ -47,7 +47,7 @@ class Image:
     def face_areas(self):
         return cv2.CascadeClassifier('haarcascade_frontalface_default.xml') \
             .detectMultiScale(self._img, scaleFactor=1.2, minNeighbors=5,
-                minSize=(50, 50), flags=cv2.cv.CV_HAAR_SCALE_IMAGE)
+                minSize=(50, 50), flags=cv2.CASCADE_SCALE_IMAGE)
 
     def show(self):
         cv2.imshow('', self._img)
