@@ -42,37 +42,9 @@ class EigenFaces(object):
             class_weights_vertex = self.project_image(class_sample)
             self.projected_classes.append(class_weights_vertex.mean(0))
 
-    def predict_face_in_image(self, image_nr):
-        target_images = self.get_target_images()
-        ti = np.array(Image.open(target_images[0]), dtype = np.uint8).flatten()
-
-        return self.predict_face(ti)
-
-    def show_results(self):
-        anImage = np.array(Image.fromarray(self.list_of_arrays_of_images[0]))
-        image_height, image_width = anImage.shape[0:2] # get the size of the images
-
-        pylab.figure()
-        pylab.gray()
-        pylab.subplot(2, 4, 1)
-        pylab.imshow(self.mean_Image.reshape(image_height, image_width))
-
-        for i in range(7):
-            pylab.subplot(2, 4, i+2)
-            pylab.imshow(self.eigenfaces_matrix[i].reshape(
-                image_height, image_width))
-
-    def extract(self,X):
-        X = np.asarray(X).reshape(-1, 1)
-        return self.project_image(X)
-
     def project_image(self, X):
         X = X - self.mean_Image
         return np.dot(X, self.eigenfaces_matrix.T)
-
-    def reconstruct(self, X):
-        X = np.dot(X, self.eigenfaces_matrix)
-        return X + self.mean_Image
 
     def get_target_images(self):
         return glob.glob('target_image/*.pgm')
@@ -90,21 +62,6 @@ class EigenFaces(object):
                 min_class = self.labels_list[i]
         # print(min_class, min_distance)
         return min_class
-
-    def predict_race(self, X):
-        return np.min_target
-
-    def get_class_average_from_samples(class_samples):
-        m, n = np.array(class_samples).shape[1:3]
-        l = len(class_samples)
-        add_samples_together = np.zeros((m, n))
-
-        for a in class_samples:
-            add_samples_together = np.add(add_samples_together, a)
-
-        averagedClass = np.divide(add_samples_together, l)
-
-        return averagedClass
 
     def __repr__(self):
         return "PCA (num_components=%d)" % (self._num_components)
