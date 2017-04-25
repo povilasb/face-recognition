@@ -51,3 +51,4 @@ and guiding me through it.
 .. rubric:: References
 
 .. [#f1] http://www.vision.jhu.edu/teaching/vision08/Handouts/case_study_pca1.pdf
+.. [#f2] http://wearables.cc.gatech.edu/paper_of_week/viola01rapid.pdf
