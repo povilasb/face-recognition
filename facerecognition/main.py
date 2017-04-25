@@ -11,8 +11,8 @@ def ensure_dir_exists(path):
 
 def take_training_photos(name, n):
     for i in range(n):
-        for face in webcam.capture().gray().faces():
-            normalized = face.scale(100, 100)
+        for face in webcam.capture().faces():
+            normalized = face.gray().scale(100, 100)
 
             face_path = 'training_images/{}'.format(name)
             ensure_dir_exists(face_path)
