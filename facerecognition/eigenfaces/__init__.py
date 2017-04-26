@@ -46,9 +46,6 @@ class EigenFaces(object):
         X = X - self.mean_image
         return np.dot(X, self.eigenfaces_matrix.T)
 
-    def get_target_images(self):
-        return glob.glob('target_image/*.pgm')
-
     def predict_face(self, X):
         min_class = -1
         min_distance = np.finfo('float').max
