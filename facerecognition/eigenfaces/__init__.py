@@ -35,7 +35,7 @@ class EigenFaces(object):
               for img in self.list_of_arrays_of_images],'f')
 
         # perform PCA
-        self.eigenfaces_matrix, variance, self.mean_Image = pca.pca(images_matrix)
+        self.eigenfaces_matrix, variance, self.mean_image = pca.pca(images_matrix)
 
         # Projecting each class sample (as class matrix) and then using the class average as the class weights for comparison with the Target image
         for class_sample in list_of_matrices_of_flattened_class_samples:
@@ -43,7 +43,7 @@ class EigenFaces(object):
             self.projected_classes.append(class_weights_vertex.mean(0))
 
     def project_image(self, X):
-        X = X - self.mean_Image
+        X = X - self.mean_image
         return np.dot(X, self.eigenfaces_matrix.T)
 
     def get_target_images(self):
