@@ -19,7 +19,7 @@ Training
 
 ::
 
-    $ python facerecognition/main.py train
+    $ python3 facerecognition/main.py train
 
 This command will take 10 pictures using your webcam.
 Press any key after every shot to take a new one.
@@ -30,7 +30,7 @@ Demo
 To test face recognition use the demo that captures view from your webcam
 and recognizes faces in realtime::
 
-    $ python facerecognition/main.py demo
+    $ python3 facerecognition/main.py demo
 
 Requirements
 ============
