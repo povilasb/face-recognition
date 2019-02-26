@@ -8,6 +8,14 @@ It uses opencv to detect faces and
 
 .. image:: demo.gif
 
+
+Dependencies
+============
+
+Install dependecies::
+
+   $ pip3 install -r requirements.txt
+
 Usage
 =====
 
