@@ -7,7 +7,7 @@ olefile==0.44
 Pillow==4.1.0
 pyparsing==2.2.0
 python-dateutil==2.6.0
-pytz==2017.2
+pytz==2020.1
 PyWavelets==0.5.2
 scikit-image==0.13.0
 scipy==0.19.0
